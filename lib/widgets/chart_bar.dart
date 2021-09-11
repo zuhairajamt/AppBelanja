@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/widgets/chart.dart';
+import './chart.dart';
 
 class ChartBar extends StatelessWidget {
   final String label;
@@ -12,7 +12,7 @@ class ChartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text('\$${spendingAmount.toStringAsFixed(0)}'),
+        FittedBox(child: Text('\$${spendingAmount.toStringAsFixed(0)}')), // Direfactor fittedbox agar harganya jika panjang akan di fitkan
         SizedBox(
           height: 4,
         ),
